@@ -1,0 +1,60 @@
+body {
+    background-color: black;
+    color: red;
+    font-family: monospace;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+/* Letter shake animation */
+@keyframes letterShake {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    20% {
+        transform: translate(-1px, 1px);
+    }
+
+    40% {
+        transform: translate(1px, -1px);
+    }
+
+    60% {
+        transform: translate(-1px, -1px);
+    }
+
+    80% {
+        transform: translate(1px, 1px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.shake-letter {
+    display: inline-block;
+    animation: letterShake 0.6s infinite;
+}
+
+/* Download link styling */
+a {
+    text-decoration: none; /* removes default underline */
+}
+
+    a h1.shake {
+        color: red; /* ensures text matches body color */
+        background-color: #111; /* button background */
+        padding: 15px 40px;
+        border: 2px solid red; /* border matches text */
+        border-radius: 10px;
+        text-decoration: none; /* just in case */
+        cursor: pointer;
+        transition: transform 0.1s;
+    }
+
+        a h1.shake:hover {
+            transform: scale(1.05); /* subtle zoom on hover */
+            color: #ff5555; /* optional hover glow effect */
+        }

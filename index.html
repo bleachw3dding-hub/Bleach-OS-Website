@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BLEACH-OS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Download button -->
+    <a href="downloads/BLEACH-0S.zip" download>
+        <h1 class="shake">Download</h1>
+    </a>
+
+    <!-- Paragraph container for letter-by-letter shake -->
+    <p id="glitch-text"></p>
+
+    <!-- GIF -->
+    <img src="images/unnamed.gif" class="gif">
+
+    <!-- Script to wrap letters in spans for shaking -->
+    <script>
+        const text = "Welcome to BLEACH-OS.";
+        const container = document.getElementById("glitch-text");
+        container.innerHTML = ""; // clear any existing text
+
+        for (let i = 0; i < text.length; i++) {
+        const span = document.createElement("span");
+        span.textContent = text[i];
+        span.classList.add("shake-letter");
+        span.style.setProperty("--i", i); // optional for delay effects
+        container.appendChild(span);
+        }
+    </script>
+</body>
+</html>
